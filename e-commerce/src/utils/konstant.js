@@ -1,4 +1,5 @@
 import React from "react";
+import { FaHackerNewsSquare } from "react-icons/fa";
 import { GiCompass, GiDiamondHard, GiStabbedNote } from "react-icons/gi";
 export const links = [
   {

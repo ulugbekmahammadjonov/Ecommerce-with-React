@@ -4,17 +4,20 @@ import {logo} from "../assets/logo.svg"
 import {FaBars} from "react-icons/fa"
 import { Link } from 'react-router-dom'
 import {link} from "../utils/konstant"
+import CartButtons from './CartButtons'
 
 const Navbar = () => {
   return (
     <NavContainer>
       <div className="nav-center">
-        <Link to="/">
-          <img src={logo} alt="comfy sloth" />
-        </Link>
-        <button type="button" className="nav-toggle">
-          <FaBars />
-        </button>
+        <div className="nav-header">
+          <Link to="/">
+            <img src={logo} alt="comfy sloth" />
+          </Link>
+          <button type="button" className="nav-toggle" onClick={openSidebar}>
+            <FaBars />
+          </button>
+        </div>
         <ul className="nav-links">
           {links.map((link) => {
             const { id, text, url } = link;
@@ -25,6 +28,7 @@ const Navbar = () => {
             );
           })}
         </ul>
+        <CartButtons />
       </div>
     </NavContainer>
   );
